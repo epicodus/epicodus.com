@@ -1,0 +1,89 @@
+<!-- *********************************** -->
+<!-- BELOW CODE IN PAGE INJECTION -->
+<!-- *********************************** -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W32353P');</script>
+<!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/css/swipebox.min.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/js/jquery.swipebox.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+        $('a[href="http://vimeo.com/170514373"]').addClass('lightbox');
+
+    $('.lightbox').swipebox({autoplayVideos: true});
+    $('a[href="http://vimeo.com/170514373"]').click(function() {
+      _gaq.push(['_trackEvent', 'Played Video - PPC Landing Page', 'Played Video']);
+    });
+  });
+</script>
+
+<style>
+/** Make "Watch a video of Epicodus" text more prominent **/
+a[href="http://vimeo.com/170514373"] {
+  	font-size: 1.5em;
+    font-weight: 600;
+}
+@media only screen and (max-width: 25em) {
+	a[href="http://vimeo.com/170514373"] {
+  		font-size: 1.2em;
+	}
+}
+</style>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
+<!-- Google Offline Conversion Tracking -->
+<script type="text/javascript">
+function setCookie(name, value, days){
+    var date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    var expires = "; expires=" + date.toGMTString();
+    document.cookie = name + "=" + value + expires + ";path=/";
+}
+function getParam(p){
+    var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+var gclid = getParam('gclid');
+if(gclid){
+    var gclsrc = getParam('gclsrc');
+    if(!gclsrc || gclsrc.indexOf('aw') !== -1){
+	    setCookie('gclid', gclid, 90);
+	}
+}
+var utmSource = getParam('utm_source');
+if(utmSource) {
+  setCookie('utmSource', utmSource, 90);
+}
+var utmCampaign = getParam('utm_campaign');
+if(utmCampaign) {
+  setCookie('utmCampaign', utmCampaign, 90);
+}
+var utmTerm = getParam('utm_term');
+if(utmTerm) {
+  setCookie('utmTerm', utmTerm, 90);
+}
+</script>
+
+
+<!-- *********************************** -->
+<!-- GET MORE INFO FORM SETUP -->
+<!-- *********************************** -->
+
+<!-- advanced post-submit html -->
+<meta http-equiv="refresh" content="0; url=/schedule-a-call/" />
+
+
+<!-- storage options Google Drive -->
+Seattle Inquiries (Squarespace/Zapier)
+
+<!-- storage options Mailchimp -->
+Epicodus

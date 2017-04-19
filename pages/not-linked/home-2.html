@@ -1,0 +1,232 @@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/css/swipebox.min.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/js/jquery.swipebox.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+ $('a[href="http://vimeo.com/170514373"]').addClass('lightbox');
+    $('.lightbox').swipebox({autoplayVideos: true});
+  });
+</script>
+
+<style>
+/* BECAUSE PAGE DESCRIPTION/TITLE FONT SIZE AT SMALLER SCREENS NOT 100% RESPONSIVE BY DEFAULT */
+@media only screen and (max-width: 768px) {
+    .page-desc p:nth-child(2) strong {
+      font-size: 32px !important;
+    }
+}
+
+/* GET STARTED BUTTON */
+
+.page-desc p:nth-child(4) a[href="/apply"] {
+    background-color: #00b3b4;
+    display: inline-block;
+    padding: .2em;
+    border-radius: 3px;
+    width: 9em;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-size: .8em !important;
+    font-weight: 400 !important;
+}
+.page-desc p:nth-child(4) a:hover {
+    background-color: rgba(0, 179, 180, .8) !important;
+}
+/* ADJUST VERTICAL ALIGNMENT VIDEO PLAY BUTTON */
+
+.page-desc p:nth-child(5) {
+    -webkit-transform: translateY(1em) !important;
+    transform: translateY(1em) !important;
+}
+.page-desc p:nth-child(5):hover a {
+    background-color: rgba(242, 242, 242, 0.8) !important;
+}
+/* VIDEO BUTTON */
+
+a[href="http://vimeo.com/170514373"] {
+    background-color: #f2f2f2 !important;
+    display: inline-block;
+    height: 4em;
+    width: 4em;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+}
+a[href="http://vimeo.com/170514373"]::after {
+    content: "";
+    display: block;
+    background-image: url(https://dl.dropboxusercontent.com/s/ko5e4bv499ny5o3/play2.png);
+    background-size: cover;
+    -webkit-transform: translate(-35%, -45%) !important;
+    transform: translate(-35%, -45%) !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1.9em;
+    width: 1.9em;
+}
+@media only screen and (max-width: 768px) {
+    a[href="http://vimeo.com/170514373"] {
+        height: 3em;
+        width: 3em;
+        -webkit-transform: translateY(-.7em);
+        transform: translateY(-.7em);
+    }
+    a[href="http://vimeo.com/170514373"]::after {
+        height: 1.2em;
+        width: 1.2em;
+    }
+    /* INSIDE HAMBURGER MENU */
+
+    #mobileNav ul li {
+        font-weight: 400 !important;
+    }
+    #mobileNav ul li a span {
+        font-weight: 400 !important;
+    }
+    #mobileNav ul li:nth-child(6) a span {
+        color: #00b3b4;
+    }
+    .nav-wrapper {
+        width: 74% !important;
+    }
+}
+/* MAIN NAV TWEAKS */
+
+@media only screen and (max-width: 905px) {
+    .main-nav ul li {
+        margin: 0 0 0 18px;
+    }
+    .icon-menu:before {
+        font-size: 3.2em !important;
+        margin: 25px 14px auto auto;
+    }
+}
+/* MAKE BADGES LOOK MORE CENTERED (THEY ALREADY WERE, BUT THE NATURE OF THE SHAPES MAKE THEM LOOK LIKE THEY AREN'T */
+
+#block-yui_3_17_2_3_1485989984661_16029 {
+    -webkit-transform: translateX(3%);
+    transform: translateX(3%);
+}
+#block-yui_3_17_2_3_1485989984661_16029 .image-block-outer-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+/* ADJUST CENTERING BADGES */
+
+#block-yui_3_17_2_3_1485989984661_16029 .sqs-block-content {
+    -webkit-transform: translate(-2%, -10%) !important;
+    transform: translate(-2%, -10%) !important;
+}
+/* ADD GREY BACKGROUND BEHIND BADGES */
+
+#block-yui_3_17_2_3_1485989984661_16029::before {
+    content: "";
+    background-color: #F2f2f2 !important;
+    display: block;
+    position: absolute;
+    left: -80%;
+    /* shame! */
+
+    height: 75%;
+    min-width: 2800px !important;
+    /* shame! */
+
+    z-index: -1;
+}
+/* REMOVE SQS DEFAULT TOP PADDING ADD FOR SMALLER SCREENS */
+
+@media only screen and (max-width: 640px) {
+    #block-yui_3_17_2_3_1485989984661_16029 {
+        /* block containing badges */
+
+        padding-top: 0 !important;
+    }
+}
+/* ADJUST SPACING OF "WHO WE ARE" CONTENT */
+
+#block-yui_3_17_2_3_1465843257536_12652 {
+    padding-top: 1.5em;
+}
+/* PAGE CONTENT WRAPPER */
+
+.content-inner {
+    max-width: 1000px;
+    padding-top: 0;
+    /* so badges are closer to the fold */
+}
+/* MAIN BANNER TEXT */
+
+.title-desc-inner {
+    max-width: 1050px !important;
+}
+/* "WHO WE ARE" - VALUES TEXT SIZE OVERWRITE */
+
+#block-yui_3_17_2_6_1428517535368_8021 p,
+#block-yui_3_17_2_3_1465843257536_56292 p,
+#block-yui_3_17_2_6_1428517535368_6823 p,
+#block-yui_3_17_2_6_1428517535368_6334 p {
+    font-size: 14px !important;
+}
+/* BLOCK QUOTE STUFF */
+
+#block-yui_3_17_2_7_1465859422555_39775,
+#block-yui_3_17_2_7_1465859422555_18845,
+#block-yui_3_17_2_4_1465926133067_19458 {
+    position: relative;
+    z-index: 1;
+}
+#block-yui_3_17_2_7_1465859422555_39775::before,
+#block-yui_3_17_2_7_1465859422555_18845::before,
+#block-yui_3_17_2_4_1465926133067_19458::before {
+    content: "";
+    background-color: #F2f2f2;
+    display: block;
+    position: absolute;
+    /* -webkit-transform: translateX(-31.65%) !important;
+  transform: translateX(-31.65%) !important;*/
+
+    left: -80%;
+    /* shame! */
+
+    height: 95%;
+    min-width: 2800px !important;
+    /* shame! */
+
+    z-index: -1;
+}
+#block-yui_3_17_2_7_1465859422555_39775 blockquote,
+#block-yui_3_17_2_7_1465859422555_18845 blockquote,
+#block-yui_3_17_2_4_1465926133067_19458 blockquote {
+    margin-top: 3em;
+}
+#block-yui_3_17_2_7_1465859422555_39775 figcaption,
+#block-yui_3_17_2_7_1465859422555_18845 figcaption,
+#block-yui_3_17_2_4_1465926133067_19458 figcation {
+    margin: 1em 2em auto auto;
+}
+@media only screen and (max-width: 425px) {
+    /* ADJUST BLOCK QUOTE TEXT SIZE FOR SMALLER SCREENS */
+
+    #block-yui_3_17_2_7_1465859422555_39775 blockquote,
+    #block-yui_3_17_2_7_1465859422555_18845 blockquote,
+    #block-yui_3_17_2_4_1465926133067_19458 blockquote {
+        font-size: 1em;
+    }
+}
+/* BUTTON TWEAK */
+
+#block-yui_3_17_2_6_1428517535368_52359,
+#block-yui_3_17_2_18_1465843257536_89528 {
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
+}
+/* Graduates hired at - font size overwrite */
+
+#block-yui_3_17_2_2_1466033631564_17330 p span {
+    font-size: 14px !important;
+}
+</style>

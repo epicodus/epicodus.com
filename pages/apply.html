@@ -1,0 +1,61 @@
+<style>
+@media only screen and (max-width : 905px) {
+  .main-nav ul li {
+	 margin: 0 0 0 18px;
+  }
+}
+</style>
+
+<!-- *********************************** -->
+<!-- BELOW CODE IN EMBBEDED SCRIPT BLOCK -->
+<!-- *********************************** -->
+
+<div id="wufoo-z12e0pp21gzvlw1">
+  Fill out my <a href="https://epicodus.wufoo.com/forms/z12e0pp21gzvlw1">online form</a>.
+</div>
+
+<div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
+
+<script type="text/javascript">
+  function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+  }
+
+  function readCookie(name) {
+    var n = name + "=";
+    var cookie = document.cookie.split(';');
+    for(var i=0;i < cookie.length;i++) {
+      var c = cookie[i];
+      while (c.charAt(0)==' '){c = c.substring(1,c.length);}
+      if (c.indexOf(n) == 0){
+        return c.substring(n.length,c.length);
+      }
+    }
+    return null;
+  }
+
+  var gclid = readCookie('gclid') || '';
+  var utmSource = readCookie('utmSource') || '';
+  var utmCampaign = readCookie('utmCampaign') || '';
+  var utmTerm = readCookie('utmTerm') || '';
+  var fieldsToPass = 'field250=' + gclid + '&field671=' + utmSource + '&field670=' + utmCampaign + '&field672=' + utmTerm;
+
+  var z12e0pp21gzvlw1;(function(d, t) {
+    var s = d.createElement(t), options = {
+      'userName':'epicodus',
+      'formHash':'z12e0pp21gzvlw1',
+      'autoResize':true,
+      'height':'613',
+      'async':true,
+      'host':'wufoo.com',
+      'header':'show',
+      'ssl':true,
+      'defaultValues':fieldsToPass
+    };
+    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+    s.onload = s.onreadystatechange = function() {
+    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try { z12e0pp21gzvlw1 = new WufooForm();z12e0pp21gzvlw1.initialize(options);z12e0pp21gzvlw1.display(); } catch (e) {}};
+    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+  })(document, 'script');
+</script>
