@@ -1,52 +1,80 @@
 <script>
-  $(document).ready(function() {
-
- $('a[href="http://vimeo.com/170514373"]').addClass('lightbox');
-    $('.lightbox').swipebox({autoplayVideos: true});
-  });
+$(document).ready(function() {
+	$('a[href="http://vimeo.com/170514373"]').addClass('lightbox');
+	$('.lightbox').swipebox( {
+		autoplayVideos: true
+	}
+	);
+}
+);
 </script>
-
 <style>
-/*** tighten up employer icons section ***/
-/* text */
+/*** miscellaneous ***/
+
+  /* adjust page content wrapper */
+
+.content-inner {
+	max-width: 1000px;
+	padding-top: 0; /* adjusts whitespace above badges so they are closer to the fold */
+}
+
+  /* main banner text */
+
+.title-desc-inner {
+	max-width: 1050px !important;
+}
+
+  /* adjust whitespace above video bg */
+
+.sqs-video-background {
+	top: 3em !important;
+}
+
+/*** employer icons section ***/
+
+  /* tighten up spacing - text */
 
 #block-yui_3_17_2_2_1466033631564_17330 {
-	padding-top: 1.8em;
+	padding-top: 1.5em;
 	padding-bottom: .5em;
 }
 
-/* icons */
+  /* tighten up spacing - icons */
 
-#block-a3e35cda40475468119e {
-	padding-bottom: .2em;
+#block-a3e35cda40475468119e, #block-yui_3_17_2_4_1500411596637_26133 {
+	padding-bottom: .4em;
 	padding-top: .5em;
 	margin-bottom: 0;
 }
 
-/* Graduates hired at - font size overwrite */
+/*** "our graduates hired at..." - font size overwrite ***/
+
+    /* reason: sqs style editor is site-wide; unable to
+    change one style without affecting entire site */
 
 #block-yui_3_17_2_2_1466033631564_17330 p span {
 	font-size: 16px !important;
 }
 
 /*** pitch section ***/
-/* add bg; note that it disappears on mobile with badges */
+
+  /* add grey bg; note: disappears on mobile along with badges */
 
 #block-3d1373f8ba6d5a091adb::before {
 	content: "";
 	background-color: #f2f2f2 !important;
 	display: block;
 	position: absolute;
-	left: -300%;
+	left: -451%;
 	top: -5.2em;
 	height: 23em;
-	min-width: 2800px !important;
+	min-width: 2560px !important;
 	-ms-transform: translateY(-10px);
 	transform: translateY(-10px);
 	z-index: 0;
 }
 
-/* pitch body text tweak */
+  /* pitch body text tweak */
 
 #block-yui_3_17_2_3_1465843257536_12652 {
 	padding-top: 4.5em;
@@ -55,57 +83,36 @@
 #block-yui_3_17_2_3_1465843257536_12652 p {
 	font-size: 18.9px !important;
 }
-@media only screen and (min-width: 475px) {
-	#block-yui_3_17_2_3_1465843257536_12652 {
-		min-width: 450px;
-	}
-}
 
-/* badges tweak */
+  /* badges positioning tweak */
 
 #block-3d1373f8ba6d5a091adb, #block-b248f21b6ad89d0a7c8c {
 	-ms-transform: translateY(1em);
 	transform: translateY(1em);
 }
 
-/* button tweak */
-
-@media only screen and (min-width: 641px) {
-	#block-yui_3_17_2_3_1491670506235_31469 {
-		-ms-transform: translateY(1em);
-		transform: translateY(1em);
-	}
-}
-
-/* adjust pitch grey bg as text break down on medium sizes */
-
-@media screen and (min-width: 641px) and (max-width: 928px) {
-	#block-3d1373f8ba6d5a091adb::before {
-		height: 26em;
-	}
-}
-
-/** slightly vertically align 'what to expect' button **/
+  /* slightly vertically align 'LEARN MORE' button */
 
 #block-yui_3_17_2_14_1491836274890_54066 {
 	-ms-transform: translateY(2em);
 	transform: translateY(2em);
 }
 
-/*** CIRR SECTION - FIX LAYER ORDER ***/
-/*cirr img*/
+/*** CIRR section ***/
+
+  /* cirr logo - fix layer order */
+
+  /* reason: bg image inserted as a pseudo element seems to
+  interfere with sqs-inserted images, which don't show up */
 
 #block-yui_3_17_2_14_1491584521709_31397 {
 	z-index: 1 !important;
 }
 
-/* CIRR SECTION - BACKGROUND */
-
-
-/*text block*/
+  /* cirr section - image bg */
 
 #block-yui_3_17_2_3_1465843257536_108007::before {
-	content: url(https://dl.dropboxusercontent.com/s/zzwn7w9bz0nxzr9/students%20first%20bg-edit.jpg);
+	content: url(https://epicodus.squarespace.com/s/students-first-bg-edit.jpg);
 	display: block;
 	position: absolute;
 	left: 25%;
@@ -119,51 +126,30 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 }
-@media only screen and (max-width: 768px) {
-	/* removes cirr section background img on mobile */
-	#block-yui_3_17_2_3_1465843257536_108007::before {
-		display: none;
-	}
-	/* replaces cirr section background image on mobile */
-	#block-yui_3_17_2_3_1465843257536_108007::after {
-		content: "";
-		background-color: #4a4a4a !important;
-		display: block;
-		position: absolute;
-		left: -300%;
-		/* shame! thank sqs for this. */
-		top: 5%;
-		height: 95%;
-		min-width: 2800px !important;
-		/* shame! */
-		-ms-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
-}
 
-/* CIRR SECTION - BODY TEXT */
+  /* cirr section - body text */
 
 #block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content p, #block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content h1 {
 	color: white !important;
 	margin-top: 0;
 	position: relative;
-	z-index: 9000;
+	z-index: 9000; /* fix layer order */
 }
 
-/* tighten up body text for better spacing between button */
+  /* tighten up body text for better spacing between button */
 
 #block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content p:nth-child(4) {
 	letter-spacing: 0;
 	line-height: 1.4em;
 }
 
-/* empty p above button */
+  /* adjust empty p above button for better spacing */
 
 #block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content p:nth-child(5) {
 	line-height: 0px;
 }
 
-/* button */
+  /* 'VIEW JOB OUTCOMES' button */
 
 #block-yui_3_17_2_3_1465843257536_108007 a {
 	font-weight: 400!important;
@@ -180,20 +166,10 @@
 	justify-content: center;
 	margin: auto;
 }
-@media only screen and (min-width: 769px) {
-	/* keep wrapping body text from pushing button down out of section */
-	#block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content p:nth-child(4) {
-		min-width: 432px;
-	}
-	/* bring button up slightly as needed */
-	#block-yui_3_17_2_3_1465843257536_108007 a {
-		-ms-transform: translateY(-.8em);
-		transform: translateY(-.8em);
-	}
-}
 
-/** testimonial section **/
-/* grad avatar */
+/*** testimonial/reviews section ***/
+
+  /* grad avatar */
 
 #block-yui_3_17_2_80_1492016576487_48683 {
 	padding-left: 0;
@@ -201,7 +177,7 @@
 	left: 1em;
 }
 
-/* grad info */
+  /* grad info */
 
 #block-yui_3_17_2_80_1492016576487_52113 {
 	line-height: 0.5em;
@@ -209,25 +185,19 @@
 	padding-top: 2em;
 }
 
-/* BECAUSE PAGE DESCRIPTION/TITLE FONT SIZE AT SMALLER SCREENS NOT 100% RESPONSIVE BY DEFAULT */
+/*** video play button ***/
 
-@media only screen and (max-width: 768px) {
-	.page-desc p:nth-child(2) strong {
-		font-size: 32px !important;
-	}
-}
-
-/* ADJUST VERTICAL ALIGNMENT VIDEO PLAY BUTTON */
+  /* adjust vertical alignment  */
 
 .page-desc p:nth-child(5) {
-	-ms-transform: translateY(1em) !important;
-	transform: translateY(1em) !important;
+	-ms-transform: translatey(1em) !important;
+	transform: translatey(1em) !important;
 }
 .page-desc p:nth-child(5):hover a {
 	background-color: rgba(242, 242, 242, 0.8) !important;
 }
 
-/* VIDEO BUTTON */
+  /* button styles */
 
 a[href="http://vimeo.com/170514373"] {
 	background-color: #f2f2f2 !important;
@@ -253,25 +223,70 @@ a[href="http://vimeo.com/170514373"]::after {
 	height: 1.9em;
 	width: 1.9em;
 }
+
+/*** media queries ***/
+
+@media only screen and (min-width: 475px) {
+
+  /* pitch body text */
+
+  #block-yui_3_17_2_3_1465843257536_12652 {
+		min-width: 450px;
+	}
+}
+
 @media only screen and (max-width: 768px) {
+
+  /* removes cirr section background img on mobile */
+
+  #block-yui_3_17_2_3_1465843257536_108007::before {
+    display: none;
+  }
+
+  /* replaces cirr section background image on mobile */
+  #block-yui_3_17_2_3_1465843257536_108007::after {
+    content: "";
+    background-color: #4a4a4a !important;
+    display: block;
+    position: absolute;
+    left: -300%;
+    /* shame! thank sqs for this. */
+    top: 5%;
+    height: 95%;
+    min-width: 2800px !important;
+    /* shame! */
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  /* because page description/title font size at smaller screens not 100% responsive by default */
+
+	.page-desc p:nth-child(2) strong {
+		font-size: 32px !important;
+	}
+
+  /* video button */
+
 	a[href="http://vimeo.com/170514373"] {
 		height: 3em;
 		width: 3em;
-		-ms-transform: translateY(-.7em);
-		transform: translateY(-.7em);
+		-ms-transform: translatey(-.7em);
+		transform: translatey(-.7em);
 	}
 	a[href="http://vimeo.com/170514373"]::after {
 		height: 1.2em;
 		width: 1.2em;
 	}
-	/* INSIDE HAMBURGER MENU */
-	#mobileNav ul li {
+
+	/* inside hamburger menu */
+
+	#mobilenav ul li {
 		font-weight: 400 !important;
 	}
-	#mobileNav ul li a span {
+	#mobilenav ul li a span {
 		font-weight: 400 !important;
 	}
-	#mobileNav ul li:nth-child(6) a span {
+	#mobilenav ul li:nth-child(6) a span {
 		color: #00b3b4;
 	}
 	.nav-wrapper {
@@ -279,7 +294,24 @@ a[href="http://vimeo.com/170514373"]::after {
 	}
 }
 
-/* MAIN NAV TWEAKS */
+
+@media only screen and (min-width: 769px) {
+
+  /* keep wrapping body text from pushing button down out of section */
+
+  #block-yui_3_17_2_3_1465843257536_108007 .sqs-block-content p:nth-child(4) {
+    min-width: 432px;
+  }
+
+  /* bring button up slightly as needed */
+
+  #block-yui_3_17_2_3_1465843257536_108007 a {
+    -ms-transform: translateY(-.8em);
+    transform: translateY(-.8em);
+  }
+}
+
+  /* main nav tweaks */
 
 @media only screen and (max-width: 905px) {
 	.main-nav ul li {
@@ -291,39 +323,50 @@ a[href="http://vimeo.com/170514373"]::after {
 	}
 }
 
-/* REMOVE BADGES ON SMALLER SCREENS */
+@media only screen and (min-width: 641px) {
+
+  /* button positioning tweak */
+
+  #block-yui_3_17_2_3_1491670506235_31469 {
+    -ms-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 928px) {
+
+  /* adjust pitch grey bg as text breaks down on medium screens */
+
+  #block-3d1373f8ba6d5a091adb::before {
+    height: 26em;
+  }
+}
 
 @media only screen and (max-width: 640px) {
-	/* remove pitch section training badges (and gray bg) on mobile due to responsive weirdness  */
-	#block-3d1373f8ba6d5a091adb, #block-b248f21b6ad89d0a7c8c {
+
+  /* remove pitch section training badges (and gray bg) on mobile due to responsive weirdness  */
+
+  #block-3d1373f8ba6d5a091adb, #block-b248f21b6ad89d0a7c8c {
 		display: none;
 	}
-	/* pitch - learn more button alignment tweak */
-	#block-yui_3_17_2_3_1491670506235_31469 {
-		-ms-transform: translateY(-1em);
-		transform: translateY(-1em);
+
+  /* pitch - learn more button alignment tweak */
+
+  #block-yui_3_17_2_3_1491670506235_31469 {
+		-ms-transform: translatey(-1em);
+		transform: translatey(-1em);
 	}
-	/* switchup, coursereport badges resize */
-	#block-yui_3_17_2_12_1491783174541_29653, #block-yui_3_17_2_12_1491783174541_26284 {
+
+  /* switchup, coursereport badges resize */
+
+  #block-yui_3_17_2_12_1491783174541_29653, #block-yui_3_17_2_12_1491783174541_26284 {
 		padding: 5em 5em 0 5em;
 	}
-	/* remove grad avatar on mobile */
-	#block-yui_3_17_2_80_1492016576487_48683 {
+
+  /* remove grad avatar on mobile */
+
+  #block-yui_3_17_2_80_1492016576487_48683 {
 		display: none;
 	}
 }
-
-/* PAGE CONTENT WRAPPER */
-
-.content-inner {
-	max-width: 1000px;
-	padding-top: 0;
-	/* so badges are closer to the fold */
-}
-
-/* MAIN BANNER TEXT */
-
-.title-desc-inner {
-	max-width: 1050px !important;
-}
-</style>''
+</style>

@@ -31,105 +31,130 @@ _____  |  |_______   ____ _____     __| _/__.__.| |
 
   ****************************************************/
 
-/** NAV TWEAKS **/
-    @media only screen
-  and (min-width : 1024px) {
-     .title-nav-wrapper {
-      max-width: 1440px;
-      padding: .68em 1em !important; /* template style is rather large and unable to alter using editor */
-    }
-  }
-    @media only screen
-  and (min-width : 320px)
-  and (max-width : 480px) {
-    .title-nav-wrapper {
-      padding-left: 1.5em !important;
-      padding-right: 1.5em !important;
-    }
+  /** add juxtoposition color for sub-menu for clarity **/
+
+  .folder-child-wrapper {
+  	background-color: #f6f6f6;
   }
 
-/** FIX NAV LI BREAKING DOWN TO ANOTHER LINE AT CERTAIN SIZES **/
-  @media only screen
-and (min-width : 768px) {
-	.main-nav {
-    	min-width: 813px !important;
-    }
-}
+  /** overwrite sqs button styles for 'apply' **/
 
-/** OVERWRITE SQS BUTTON STYLES FOR 'APPLY' **/
-  #desktopNav a[href="/apply/"] {
-  color: #ffffff !important;
-}
-  #desktopNav a[href="/apply/"] span {
-    font-weight: 600 !important;
-    background-color: #00b3b4;
-    display: inline-block;
-    padding: .5em;
-    border-radius: 3px;
-    width: 7.5em;
-    text-shadow: 0 1px rgba(0,0,0,0.1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-  #desktopNav a[href="/apply/"] span:hover {
-  	background-color: rgba(0,179,180,.8) !important;
-}
+  #desktopnav a[href="/apply/"] {
+  	color: #ffffff !important;
+  }
 
-/** MAKE NAV/LOGO SMALLER THAN SQS ALLOWS **/
+  #desktopnav a[href="/apply/"] span {
+  	font-weight: 600 !important;
+  	background-color: #00b3b4;
+  	display: inline-block;
+  	padding: .5em;
+  	border-radius: 3px;
+  	width: 7.5em;
+  	text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-webkit-box-pack: center;
+  	-ms-flex-pack: center;
+  	justify-content: center;
+  }
+
+  #desktopnav a[href="/apply/"] span:hover {
+  	background-color: rgba(0, 179, 180, .8) !important;
+  }
+
+  /** make nav/logo smaller than sqs editor allows **/
+
   .site-title img {
-    max-height: 71px;
+  	max-height: 71px;
   }
 
-/** LINE ABOVE FOOTER **/
+  /** aesthetic line above footer **/
+
   footer {
-   border-top: 4px solid #00b3b4;
+  	border-top: 4px solid #00b3b4;
   }
 
-/** ADJUST HEIGHT OF FOOTER ON EVERYTHING BUT MOBILE **/
-  @media (min-width: 768px) {
-    .footer-wrapper {
-      padding: 2.2em;
-    }
-  }
+  /** shameful overwrite sqs button style on footer; add email icon **/
 
-/** SHAMEFUL OVERWRITE SQS BUTTON STYLE ON FOOTER; ADD EMAIL ICON **/
   #block-yui_3_17_2_5_1470264239943_6231 div div span {
-    border: none !important;
-    color: white !important;
-    -webkit-transform: translateY(-0.3em);
-            transform: translateY(-0.3em);
-    position: relative;
-    z-index: 2;
+  	border: none !important;
+  	color: white !important;
+  	-webkit-transform: translatey(-0.3em);
+  	transform: translatey(-0.3em);
+  	position: relative;
+  	z-index: 2;
   }
+
   #block-yui_3_17_2_5_1470264239943_6231 div div span:hover {
-    text-decoration: underline !important;
-    background-color: transparent !important;
+  	text-decoration: underline !important;
+  	background-color: transparent !important;
   }
+
   #block-yui_3_17_2_5_1470264239943_6231 div div {
-  	min-width: 290px; /* fix email alignment on mobile */
+  	min-width: 290px;
+  	/* fix email alignment on mobile */
   }
+
   #block-yui_3_17_2_5_1470264239943_6231 div div::after {
   	content: url(https://epicodus.squarespace.com/s/mail-icon-md.svg);
-    display: inline-block;
-    -webkit-transform: translate(-1.9em, 0.1em);
-            transform: translate(-1.9em, 0.1em);
-    position: relative;
-    z-index: 1;
-}
+  	display: inline-block;
+  	-webkit-transform: translate(-1.9em, 0.1em);
+  	transform: translate(-1.9em, 0.1em);
+  	position: relative;
+  	z-index: 1;
+  }
 
- /**  REMOVES GOOGLE CONVERSION IFRAME PROPERTIES THAT CREATE WHITE SPACE BELOW FOOTER **/
- iframe[name='google_conversion_frame'] {
-    height: 0 !important;
-    width: 0 !important;
-    line-height: 0 !important;
-    font-size: 0 !important;
-    margin-top: -13px;
-    float: left;
-}
+  /**  removes google conversion iframe properties that create white space below footer **/
+
+  iframe[name='google_conversion_frame'] {
+  	height: 0 !important;
+  	width: 0 !important;
+  	line-height: 0 !important;
+  	font-size: 0 !important;
+  	margin-top: -13px;
+  	float: left;
+  }
+
+  /** nav tweaks **/
+
+  @media only screen and (min-width: 1024px) {
+  	.title-nav-wrapper {
+  		max-width: 1440px;
+  		padding: .68em 1em !important;
+  		/* template style is rather large and unable to alter using editor */
+  	}
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+  	.title-nav-wrapper {
+  		padding-left: 1.5em !important;
+  		padding-right: 1.5em !important;
+  	}
+  }
+
+  /** reduce whitespace in top nav so it doesn't take too much above the fold space **/
+
+  @media only screen and (max-width: 600px) {
+  	.title-nav-wrapper {
+  		padding: 10px 20px 10px 15px !important;
+  	}
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    /** fix nav li breaking down to another line at certain sizes **/
+
+    .main-nav {
+  		min-width: 813px !important;
+  	}
+
+  	/** adjust height of footer on everything but mobile **/
+
+    .footer-wrapper {
+  		padding: 2.2em;
+  	}
+  }
 </style>
 
 <!-- Facebook Pixel Code -->
