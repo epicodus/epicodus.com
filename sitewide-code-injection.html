@@ -31,7 +31,7 @@ _____  |  |_______   ____ _____     __| _/__.__.| |
 
   ****************************************************/
 
-  /** add juxtoposition color for sub-menu for clarity **/
+/** add juxtoposition color for sub-menu for clarity **/
 
   .folder-child-wrapper {
   	background-color: #f6f6f6;
@@ -217,24 +217,6 @@ var google_remarketing_only = true;
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.3.0.2/js/jquery.swipebox.min.js"></script>
 
-<!-- GetSiteControl -->
-<script>
-  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/47047/script.js');
-</script>
-<script>
-_gscq.push(['callback','submit', function (widgetId, data) {
- window.google_trackConversion({
-   google_conversion_id: 956838688,
-   google_conversion_label: 'PDu8CPr702cQoOagyAM',
-   google_remarketing_only: false
- });
- _gaq.push(['_trackEvent', 'Email Lead', 'Submission']);
-  fbq('track', 'Lead');
-}]);
-</script>
-
 <!-- Google Offline Conversion Tracking -->
 <script type="text/javascript">
 function setCookie(name, value, days){
@@ -252,13 +234,11 @@ if(gclid){
     var gclsrc = getParam('gclsrc');
     if(!gclsrc || gclsrc.indexOf('aw') !== -1){
 	    setCookie('gclid', gclid, 90);
-      _gscq.push(['user','gclid', gclid]);
 	}
 }
 var sqfSource = getParam('sqf_source');
 if(sqfSource) {
   setCookie('sqfSource', sqfSource, 90);
-  _gscq.push(['user','sqfSource', sqfSource]);
 }
 function readCookie(name) {
   var n = name + "=";
@@ -271,3 +251,5 @@ function readCookie(name) {
   return null;
 }
 </script>
+
+<p id="top"></p>
